@@ -20,11 +20,11 @@
             
             // Player win
             if (playerLowerSelect === "paper" && computerLowerSelect === "rock" || playerLowerSelect === "scissors" && computerLowerSelect === "paper" || playerLowerSelect === "rock" && computerLowerSelect === "scissors") {
-                return "You win the round! " + capitalizeFirstLetter(playerLowerSelect) + " beats " + capitalizeFirstLetter(computerLowerSelect) + ".";
+                return `You win the round! ${capitalizeFirstLetter(playerLowerSelect)} beats ${capitalizeFirstLetter(computerLowerSelect)}.`;
             } 
             // Player loss
             else if (computerSelection === 'scissors' && playerSelection === 'paper' || computerSelection === 'rock' && playerSelection === 'scissors' || computerSelection === 'paper' && playerSelection === 'rock') {
-                return "You lose the round. " + capitalizeFirstLetter(playerLowerSelect) + " loses to " + capitalizeFirstLetter(computerLowerSelect) + ".";
+                return `You lose the round. ${capitalizeFirstLetter(playerLowerSelect)} loses to ${capitalizeFirstLetter(computerLowerSelect)}.`;
             } 
             // Draw
             else {
