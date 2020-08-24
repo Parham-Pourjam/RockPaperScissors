@@ -64,6 +64,7 @@
             const tieScore = document.querySelector('#tieScore');
             const scoreBoard = document.querySelector('.scoreboard');
             scoreBoard.style.borderStyle = 'solid';
+            
             playerScore.textContent = `Player Wins: ${playerWins}`;
             computerScore.textContent = `Computer Wins: ${computerWins}`;
             tieScore.textContent = `Ties: ${ties}`;
@@ -115,7 +116,7 @@
     
         }
         
-        // add event listener to the game keys/buttons, and call game funtion everytime one of them is clicked on    
+        // add event listener to the game keys/buttons, and call game function everytime one of them is clicked on    
         const buttons = document.querySelectorAll('.key');
         console.log(buttons);
         buttons.forEach(key => key.addEventListener('click', game));
@@ -133,7 +134,6 @@
             numberOfRounds = 0;
 
             updateScoreboard();
-
         }
 
         

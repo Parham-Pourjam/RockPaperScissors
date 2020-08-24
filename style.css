@@ -9,6 +9,7 @@ body {
     border-radius: 20px;
     margin-left: 20%;
     margin-right: 20%;
+    scale: 0.6;
 }
 
 .scoreboard {
@@ -17,7 +18,9 @@ body {
     flex-direction: column;
     text-align: center;
     background-color: #1c46e0;
-    margin: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
     border-style: hidden;
     border-radius: 20px;
 }
@@ -29,12 +32,22 @@ body {
 .restartButton {
     width: 50px;
     height: 50px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSK2wFSvYydylLdRCTFhSeXy_GPSDGCS_4DxQ&usqp=CAU);
-    background-size: cover;
     border: 2px;
     border-radius: 30px;
     border-style: solid;
     margin: 10px;
+}
+
+.restartButton:hover {
+    scale: 1.2;
+}
+
+#rock, #paper, #scissors {
+    scale: 0.7;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+    scale: 0.8;
 }
 
 .result {
@@ -48,21 +61,6 @@ h1 {
 label {
     font-weight: 700;
     text-decoration: underline;
-}
-
-#rock {
-    scale: 0.7;
-    border-radius: 40%;
-}
-
-#paper {
-    scale: 0.7;
-    border-radius: 40%;
-}
-
-#scissors {
-    scale: 0.7;
-    border-radius: 10%;
 }
 
 img {
