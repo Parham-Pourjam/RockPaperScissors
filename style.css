@@ -1,0 +1,72 @@
+body {
+    background-color: #1c46e0;
+}
+
+.mainBody {
+    background-color: #e0b61c;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1c46e0;
+    margin: 20px;
+    border-style: hidden;
+    border-radius: 20px;
+}
+
+.winnerOfRound {
+    margin: 20px;
+}
+
+.restartButton {
+    width: 50px;
+    height: 50px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSK2wFSvYydylLdRCTFhSeXy_GPSDGCS_4DxQ&usqp=CAU);
+    background-size: cover;
+    border: 2px;
+    border-radius: 30px;
+    border-style: solid;
+    margin: 10px;
+}
+
+.result {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#rock {
+    scale: 0.7;
+    border-radius: 40%;
+}
+
+#paper {
+    scale: 0.7;
+    border-radius: 40%;
+}
+
+#scissors {
+    scale: 0.7;
+    border-radius: 10%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

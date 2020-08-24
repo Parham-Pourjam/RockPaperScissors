@@ -3,89 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css"> 
     </head>
 
-    <script>
-
-        let playerWins = 0;
-        let computerWins = 0;
-        let ties = 0;
-        
-        function computerPlay() {
-            let choices = ["Rock", "Paper", "Scissors"];
-
-            return choices[Math.floor(Math.random() * 3)].toLowerCase();
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            // Convert strings to lower case in order to make it case insensitive
-            let playerLowerSelect = playerSelection.toLowerCase();
-            let computerLowerSelect = computerSelection.toLowerCase();
-            
-            // Player win
-            if (playerLowerSelect === "paper" && computerLowerSelect === "rock" || playerLowerSelect === "scissors" && computerLowerSelect === "paper" || playerLowerSelect === "rock" && computerLowerSelect === "scissors") {
-                return `You win the round! ${capitalizeFirstLetter(playerLowerSelect)} beats ${capitalizeFirstLetter(computerLowerSelect)}.`;
-            } 
-            // Player loss
-            else if (computerSelection === 'scissors' && playerSelection === 'paper' || computerSelection === 'rock' && playerSelection === 'scissors' || computerSelection === 'paper' && playerSelection === 'rock') {
-                return `You lose the round. ${capitalizeFirstLetter(playerLowerSelect)} loses to ${capitalizeFirstLetter(computerLowerSelect)}.`;
-            } 
-            // Draw
-            else {
-                return "It's a draw...";
-            }
-        }
-
-        // Function which plays through five rounds and declares winner at the end (best out of 5)
-        function game() {
-
-            for (i = 0; i < 5; i++) {
-                // Prompt the user for their selection
-                let playerSelection = window.prompt("Rock, Paper, or Scissors?");
-                
-                let round = playRound(playerSelection, computerPlay());
-                console.log(round);
-                
-                // Update # of wins based on what the returned string from playRound() contains
-                if (round.includes("win")) {
-                    playerWins += 1;
-                }
-                else if (round.includes("lose")) {
-                    computerWins += 1;
-                }
-                else {
-                    ties += 1;
-                }
-
-            }
-            
-        }
-
-        function whoWon() {
-            // Check how many rounds each player won
-            if (playerWins > computerWins) {
-                return `You win the game! You won ${playerWins} out of 5 rounds. Computer won ${computerWins} out of 5 rounds. ${ties} out of 5 rounds were tied.`; 
-            }
-            else if (computerWins > playerWins) {
-                return `You lose the game. You won ${playerWins} out of 5 rounds. Computer won ${computerWins} out of 5 rounds. ${ties} out of 5 rounds were tied.`;
-            }
-            else {
-                return `It's a tie. You won ${playerWins} out of 5 rounds. Computer won ${computerWins} out of 5 rounds. ${ties} out of 5 rounds were tied.`;
-            }
-        }
-
-        function capitalizeFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        
-        
-        game();
-        console.log(whoWon());
-
-    </script>
+    <h1>Rock, Paper or Scissors?</h1>
+    
 
     <body>
 
+        <div class ="scoreboard">
+            <label class="label">Score: </label>
+            <div class="runningScore">
+                <p id="playerScore"></p>
+                <p id="computerScore"></p>
+                <p id="tieScore"></p>
+            </div>
+        </div>
+
+        <div class="mainBody">
+            <input type="image" id="rock" class="key" src="images/rock.png" alt="rock">
+            <input type="image" id="paper" class="key" src="images/paper.png" alt="paper">
+            <input type="image" id="scissors" class="key" src="images/scissors.png" alt="scissors">
+        </div>
+
+        <div class="scoreboard"> 
+            <div class="winnerOfRound"></div>
+            <div class="result"></div>
+            <button class="restartButton"></button>
+
+        </div>
     </body>
+    <script type="text/javascript" src="script.js"> </script>
 </html>
