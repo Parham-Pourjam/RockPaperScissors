@@ -23,6 +23,8 @@ body {
     margin-right: 25%;
     border-style: hidden;
     border-radius: 20px;
+    color: white;
+    font-size: larger;
 }
 
 .winnerOfRound {
