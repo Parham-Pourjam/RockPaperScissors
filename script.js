@@ -32,7 +32,7 @@
 
         // compare player and computer selections, then update DOM
         function playRound(playerLowerSelect, computerLowerSelect) {
-            
+                
             // Player win
             if (playerLowerSelect === "paper" && computerLowerSelect === "rock" || playerLowerSelect === "scissors" && computerLowerSelect === "paper" 
                     || playerLowerSelect === "rock" && computerLowerSelect === "scissors") {
@@ -82,8 +82,7 @@
             // Convert strings to lower case in order to make it case insensitive
             let playerLowerSelect = this.id;
             let computerLowerSelect = computerPlay().toLowerCase();
-
-            
+                
             if (numberOfRounds < 5) {
                 // store return value from playRound in variable so we can use it to determine who won
                 let round = playRound(playerLowerSelect, computerLowerSelect);
@@ -109,11 +108,8 @@
                 // declare winner if five rounds have been played
                 if (numberOfRounds == 5) {
                     whoWon();
-                    
-                    
                 }
             }
-    
         }
         
         // add event listener to the game keys/buttons, and call game function everytime one of them is clicked on    
